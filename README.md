@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+# Mini-Capstone
+# Mini-Capstone
