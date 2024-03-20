@@ -13,6 +13,6 @@ validates :quantity, comparison: {greater_than: 0}
     def total
         total = price + tax
     end
-    belongs_to :supplier
-    belongs_to :image
+belongs_to :supplier
+belongs_to :image
 end
