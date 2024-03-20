@@ -65,3 +65,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "seed_dump", "~> 3.2", ">= 3.2.4"
