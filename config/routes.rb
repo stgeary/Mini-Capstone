@@ -30,4 +30,6 @@ Rails.application.routes.draw do
   get "one_image", controller: "images", action:"one_image"
   patch "/images/:id" => "images#patch"
   delete "/images/:id" => "images#destroy"
+
+  post "/users" => "users#create"
 end
