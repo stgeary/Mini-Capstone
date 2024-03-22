@@ -10,15 +10,13 @@ class OrdersController < ApplicationController
     end
 
     def create
-        @order = Order.create(
-            user_id: params["user_id"],
-            product_id: params["product_id"],
-            quantity: params["quantity"],
-            # subtotal: params,
-            # tax: params["tax"],
-            # total: params["total"]
+        @order = current_user.orders.new(
+            user_id: params[:user_id],
+            product_id: params[:product_id],
+            quantity: params[:quantity],
+            subtotal: params[:subtotal],
         )
-        if @order.valid?
+        if @order.save
             render :show
         else
             render json: { errors: @order.errors.full_messages},
