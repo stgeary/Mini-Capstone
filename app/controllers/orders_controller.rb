@@ -1,5 +1,4 @@
 class OrdersController < ApplicationController
-
     def show
         @order = Order.find_by(id: params[:id])
         render :show
@@ -9,17 +8,13 @@ class OrdersController < ApplicationController
         orders = Order.all.order(:id)
         render json: orders
     end
-    
-    def create
-        # subtotal = @product.price
-        # tax = subtotal * 0.75
-        # total = tax + subtotal
 
+    def create
         @order = Order.create(
             user_id: params["user_id"],
             product_id: params["product_id"],
             quantity: params["quantity"],
-            # subtotal: params["subtotal"],
+            # subtotal: params,
             # tax: params["tax"],
             # total: params["total"]
         )

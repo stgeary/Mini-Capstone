@@ -1,4 +1,4 @@
-json.user_id order.user_id
+json.id order.id
 json.product order.product
 json.quantity order.quantity
 json.subtotal order.subtotal
