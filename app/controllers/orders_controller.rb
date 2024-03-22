@@ -1,4 +1,10 @@
 class OrdersController < ApplicationController
+
+    def index
+        orders = Order.all.order(:id)
+        render json: orders
+    end
+    
     def create
         @order = Order.create(
             user_id: params["user_id"],
