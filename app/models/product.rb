@@ -15,4 +15,5 @@ validates :quantity, comparison: {greater_than: 0}
     end
 belongs_to :supplier
 belongs_to :image
+has_many :order
 end
