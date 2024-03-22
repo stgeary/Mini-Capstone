@@ -11,6 +11,10 @@ class OrdersController < ApplicationController
     end
     
     def create
+        # subtotal = @product.price
+        # tax = subtotal * 0.75
+        # total = tax + subtotal
+
         @order = Order.create(
             user_id: params["user_id"],
             product_id: params["product_id"],
