@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+    before_action :authenticate_user
+    
     def show
         @order = Order.find_by(id: params[:id])
         render :show
@@ -17,7 +19,7 @@ class OrdersController < ApplicationController
         product = Product.find_by(id: params["product_id"])
 
         calculated_subtotal = product.price * params["quantity"].to_i
-        calculated_tax = calculated_subtotal / 10
+        calculated_tax = calculated_subtotal * 0.75
         calculated_total = calculated_subtotal + calculated_tax
 
         @order = current_user.orders.new(
