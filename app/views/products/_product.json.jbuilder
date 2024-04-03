@@ -9,3 +9,4 @@ json.color product.color
 json.quantity product.quantity
 json.supplier product.supplier
 json.image product.image
+json.category product.category
