@@ -21,4 +21,5 @@ class Product < ApplicationRecord
   has_many :order
   has_many :category_product
   belongs_to :category
+  has_many :carted_product
 end

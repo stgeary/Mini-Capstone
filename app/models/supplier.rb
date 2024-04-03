@@ -1,4 +1,4 @@
 class Supplier < ApplicationRecord
-    validates :name, presence: true
-    has_many :products
+  validates :name, presence: true
+  has_many :product
 end

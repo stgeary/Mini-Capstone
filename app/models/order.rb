@@ -1,7 +1,7 @@
 class Order < ApplicationRecord
   belongs_to :user
-  has_many :carted_products
-  has_many :products, through: :carted_products
+  has_many :carted_product
+  has_many :product, through: :carted_product
 
   def tax
     tax = subtotal * 0.75
